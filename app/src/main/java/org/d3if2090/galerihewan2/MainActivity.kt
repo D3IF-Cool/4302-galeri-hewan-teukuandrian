@@ -14,13 +14,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         with(binding.recyclerView) {
             addItemDecoration(DividerItemDecoration(context, RecyclerView.VERTICAL))
             adapter = MainAdapter(getData())
             setHasFixedSize(true)
         }
     }
+
     private fun getData(): List<Hewan> {
         return listOf(Hewan("Angsa", "Cygnus olor", R.drawable.angsa),
                 Hewan("Ayam", "Gallus gallus", R.drawable.ayam),
@@ -33,4 +33,5 @@ class MainActivity : AppCompatActivity() {
                 Hewan("Kuda", "Equus caballus", R.drawable.kuda),
                 Hewan("Sapi", "Bos taurus", R.drawable.sapi),
     }
+}
 }
